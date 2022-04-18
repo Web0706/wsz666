@@ -1,0 +1,197 @@
+/* 版心公共类 */
+.container {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* 该网站中多个页面相同模块的重复样式，如头部，底部 */
+
+/* -------------快捷菜单模块：xtx-shortcut  */
+.xtx-shortcut {
+    height: 52px;
+    background-color: #333333;
+}
+
+.xtx-shortcut .container {
+    height: 52px;
+    /* ps */
+    /* background-color: skyblue; */
+}
+
+.xtx-shortcut ul li {
+    float: left;
+    line-height: 52px;
+    color: #666666;
+}
+
+.xtx-shortcut ul a {
+   margin: 0 16px 0 16px;
+   color: #dcdcdc;
+   font-size: 14px;
+}
+
+.xtx-shortcut li:last-child a {
+    margin-right: 0;
+}
+
+.xtx-shortcut li:last-child a::before {
+    /* 伪元素必须设置 content */
+   content: '';
+   display: inline-block;
+   margin-right: 8px;
+   margin-top: -3px;
+
+   width: 11px;
+   height: 16px;
+   /* ps */
+   /* background-color: red; */
+   background: url(../images/sprites.png) -160px -70PX;
+   /* 垂直对齐方式，中部对齐 */
+   vertical-align:middle;
+}
+
+/* ----------------主导航模块 */
+.xtx-main-nav {
+    height: 130px;
+    padding-top: 30px;
+    /* 自动內减 */
+    box-sizing: border-box;
+    /* ps */
+    /* background-color: pink; */
+}
+
+.xtx-main-nav .logo {
+    height: 70px;
+    width: 207px;
+    margin-left: 25px;
+    /* ps */
+    /* background-color: red; */
+}
+
+.xtx-main-nav .logo a {
+    display: block;
+    height: 70px;
+    background: url(../images/logo.png);
+    /* 设置背景图片大小 */
+    background-size: 100% 100%;
+    font-size: 0;
+}
+
+.xtx-main-nav nav {
+    margin-left: 40px;
+}
+
+.xtx-main-nav nav li {
+    float: left;
+    height: 70px;
+    margin-right: 48px;
+    line-height: 70px;
+}
+
+.xtx-main-nav nav a:hover {
+    color: #27ba9b;
+    border-bottom: 1px solid #27ba9b;
+    padding-bottom: 7px;
+}
+
+.xtx-main-nav .search {
+    width: 172px;
+    height: 30px;
+    /* ps */
+    /* background-color: orange; */
+    margin-top: 24px;
+    margin-left: 34px;
+    /* 父相 */
+    position: relative;
+}
+
+.xtx-main-nav .search input {
+    width: 172px;
+    height: 30px;
+    border-bottom: 1px solid #e7e7e7;
+    padding-left: 31px;
+}
+
+.xtx-main-nav .search::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+
+    /* 使用绝对定位，子绝 */
+    position: absolute;
+    top: 5px;
+    left: 2px;
+
+    /* ps */
+    /* background-color: red; */
+    background: url(../images/sprites.png) -80px -70px;
+}
+
+.xtx-main-nav .cart {
+    position: relative;
+    width: 23px;
+    height: 23px;
+    margin-left: 15px;
+    /* ps */
+    /* background-color: red; */
+    margin-top: 28px;
+    background: url(../images/sprites.png) -120px -70px ;
+}
+
+.xtx-main-nav .cart span {
+    /* 子绝 */
+    position: absolute;
+    right: -12px;
+    top: -5px;
+    width: 20px;
+    height: 15px;
+    border-radius: 8px;
+    background-color: #e26237;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 15px;
+}
+
+/* -----------------宣传服务 .xtx-service */
+.xtx-service {
+    height: 174px;
+    background-color: #333333;
+}
+.xtx-service .container {
+    height: 173px;
+    width: 1393px;
+    border-bottom: 1px solid #434343;
+    background-color: pink;
+}
+.xtx-service .container a {
+    float: left;
+    width: 33.33%;
+    height: 173px;
+    /* ps */
+    background-color: skyblue;
+    text-align: center;
+    line-height: 173px;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.xtx-service .container a::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 19px;
+    width: 58px;
+    height: 58px;
+    /* ps */
+    /* background-color: red */
+    background: url(../images/sprites.png) 0 0;
+}
+
+.xtx-service a:nth-child(2)::before {
+    background: url(../images/sprites.png) -130px 0px;
+}
+
+.xtx-service a:nth-child(3)::before {
+    background: url(../images/sprites.png) -64px 0px ;
+}
